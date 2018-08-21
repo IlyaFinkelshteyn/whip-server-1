@@ -38,6 +38,7 @@ install:
 - sh: export CONAN_USER_HOME=/tmp/conanData
 - cmd: set PATH=%PATH%;%PYTHON%/Scripts/
 - cmd: pip.exe install conan --upgrade
+- ps: sleep 60
 - sh: sudo pip install conan --upgrade
 - conan user # Create the conan data directory
 - conan --version
