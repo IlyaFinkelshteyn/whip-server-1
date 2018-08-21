@@ -5,7 +5,9 @@ init:
   - ps: Update-AppveyorBuild -Version "$env:TAG_VERSION"
 
 image:
-- Visual Studio 2017
+- Ubuntu
+- Ubuntu
+- Ubuntu
 - Ubuntu
 
 configuration: Release
@@ -38,8 +40,7 @@ install:
 - sh: export CONAN_USER_HOME=/tmp/conanData
 - cmd: set PATH=%PATH%;%PYTHON%/Scripts/
 - cmd: pip.exe install conan --upgrade
-#- sh: sleep 5
-- sh: sudo -H pip install conan --upgrade
+- sh: sudo -H -E pip install conan --upgrade
 - conan user # Create the conan data directory
 - conan --version
 - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
