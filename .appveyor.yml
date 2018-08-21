@@ -39,7 +39,7 @@ install:
 - cmd: set PATH=%PATH%;%PYTHON%/Scripts/
 - cmd: pip.exe install conan --upgrade
 - sh: sleep 5
-- sh: sudo pip install conan --upgrade
+- sh: sudo -H pip install conan --upgrade
 - conan user # Create the conan data directory
 - conan --version
 - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
